@@ -1,0 +1,198 @@
+body {
+  margin: 0px;
+  font-size: 1.1rem;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.light-mode {
+  background-color: rgb(238, 238, 238);
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+body.light-mode a {
+  color: #000000;
+}
+
+body.dark-mode a.linkMain {
+  color: #9e9c9c;
+}
+
+body.light-mode a.linkMain {
+  color: #3a3939;
+}
+
+nav {
+  text-align: right;
+  border-radius: 7px;
+  font-size: 1.4rem;
+  position: fixed;
+  width: 100%;
+  min-height: 3vh;
+  z-index: 3;
+}
+
+body.dark-mode nav {
+  background-color: #1d1d1d;
+}
+
+body.light-mode nav {
+  background-color: rgb(221, 221, 221);
+}
+
+.conteudo {
+  min-height: 60vh;
+}
+
+.impar {
+  padding-left: 50vw;
+  padding-right: 5vw;
+}
+
+body.dark-mode .impar {
+  background-color: #252525;
+}
+
+body.light-mode .impar {
+  background-color: rgb(251, 248, 244);
+}
+
+.par {
+  padding-right: 40vw;
+  padding-left: 5vw;
+}
+
+body.dark-mode .par {
+  background-color: #000000;
+}
+
+body.light-mode .par {
+  background-color: rgb(238, 238, 238);
+}
+
+.contHorizontal {
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+}
+
+a {
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+
+main {
+  padding-top: 3vh;
+}
+
+#cover {
+  border-bottom: 1px solid #252525;
+  height: 40vh;
+  background-image: url('../img/main.png');
+  background-repeat: no-repeat;
+  background-size: auto 40vh;
+  background-position-x: 70vw;
+  background-color: rgb(251, 248, 244);
+  margin-bottom: 30vh;
+}
+
+#foto {
+  width: 100%;
+  position: absolute;
+  top: 30vh;
+}
+
+#profile {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 50%;
+  border: 1px solid #252525;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+#name {
+  position: absolute;
+  top: 55vh;
+  width: 100%;
+}
+
+#nome {
+  font-size: 7vh;
+  text-align: center;
+}
+.item{
+  padding-bottom: 10px;
+}
+
+.ultimoHr {
+  border: 0px;
+  margin: 0px;
+}
+
+footer {
+  text-align: center;
+  padding: 3vh;
+}
+
+body.dark-mode footer {
+  background-color: #1d1d1d;
+}
+
+body.light-mode footer {
+  background-color: rgb(221, 221, 221);
+}
+
+.social {
+  height: 5vh;
+  width: 5vh;
+}
+
+span {
+  color: #ff3e3e;
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+  background: #afafaf00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7f7f7f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7f7f7f;
+}
+
+@media only screen and (max-width: 768px) {
+  .par {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+  .impar {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+  .conteudo {
+    min-height: 40vh;
+  }
+  body{
+    font-size: 1.2rem;
+  }
+  #cover{
+    background-position-x: 55vw;
+  }
+}
