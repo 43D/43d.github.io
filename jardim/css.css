@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Volkhov&display=swap');
+
+/*
+
+*/
+
+* {
+    text-decoration: none;
+}
+
+body {
+    color: #ffffff;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0px;
+    font-family: 'Pacifico', cursive;
+    color: #ffffff;
+    min-height: 55vh;
+    padding-top: 35vh;
+    background: url("back1.png") no-repeat fixed;
+    background-size: cover;
+    text-shadow: 0 0 0.2em #88ff77;
+    /*
+    Fonte: https://commons.wikimedia.org/wiki/File:SF_Japanese_Garden.JPG
+    */
+}
+
+h2 {
+    text-align: center;
+    margin: 0px;
+    background-color: #02010A;
+    font-family: 'Volkhov', serif;
+    color: #ffffff;
+    padding-top: 15vh;
+}
+
+h3 {
+    text-align: center;
+    margin: 0px;
+    font-family: 'Volkhov', serif;
+    padding-top: 30vh;
+    padding-bottom: 20vh;
+}
+
+p {
+    font-family: 'Volkhov', serif;
+    padding: 10px 2vw 10px 2vw;
+    text-align: justify;
+    margin: 0px;
+}
+
+a {
+    font-family: 'Volkhov', serif;
+}
+
+.summary {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    text-align: center;
+    background-color: #02010A;
+    color: #ffffff;
+}
+
+.summary p {
+    text-align: center;
+}
+
+.preamble {
+    /*
+    Fonte: https://pixabay.com/pt/vectors/dragon-ball-silhuetas-anime-goku-3715010/
+    Atribuição não requerida
+    */
+    padding-right: 45vh;
+    background: #212121 url("back2.png") no-repeat fixed right center;
+    background-size: auto 100vh;
+    height: 125vh;
+    color: #ffffff;
+}
+
+.explanation {
+    padding-left: 32vh;
+    background: #4C4C47 url("q.png") no-repeat fixed left bottom;
+    background-size: auto 60vh;
+    height: 130vh;
+    color: #ffffff;
+}
+
+.participation {
+    background: #bfbfbf url("test.png") no-repeat fixed center top;
+    background-size: 100vw auto;
+    color: #000000;
+}
+
+.benefits {
+    /*
+    Fonte: https://upload.wikimedia.org/wikipedia/commons/1/1c/Yin_render_2.png
+    */
+    background: #d8e2dc url("back3.png") no-repeat fixed right bottom;
+    background-size: auto 100vh;
+    color: #000000;
+    height: 120vh;
+}
+
+.requirements {
+    /*
+    Fonte: https://commons.wikimedia.org/wiki/File:Neko_Wikipe-tan.png
+    */
+    padding-bottom: 20vh;
+    min-height: 120vh;
+    background: #F7EBEC url("back4.png") no-repeat fixed top left;
+    background-size: auto 50vh;
+    color: #000000;
+}
+
+.footer {
+    padding: 1vh 0vw;
+    text-align: center;
+    background-color: #02010A;
+}
+
+.design-selection,
+.design-archives,
+.design-resources {
+    background-color: #212121;
+    display: inline-grid;
+}
+
+.wrapper {
+    background-color: #212121;
+}
+
+.wrapper h3 {
+    padding: 5vh 0vw;
+}
+
+.wrapper div {
+    height: 40vh;
+}
+
+.wrapper ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1281px) {
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 2.0rem;
+    }
+    p,
+    a {
+        font-size: 1.3rem;
+    }
+    .benefits {
+        padding-right: 55vh;
+    }
+    .participation p {
+        background-color: #bfbfbf;
+    }
+    .participation .p3 {
+        padding-bottom: 15vh;
+    }
+    .requirements {
+        padding-left: 45vh;
+        padding-bottom: 55vh;
+    }
+    .design-selection,
+    .design-archives,
+    .design-resources {
+        width: 33.1%;
+    }
+    .wrapper ul {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2.0rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+    a {
+        font-size: 1.3rem;
+    }
+    .benefits {
+        padding-right: 55vh;
+    }
+    .participation p {
+        background-color: #bfbfbf;
+    }
+    .participation .p3 {
+        padding-bottom: 15vh;
+    }
+    .requirements {
+        padding-left: 45vh;
+        padding-bottom: 40vh;
+    }
+    .design-selection,
+    .design-archives,
+    .design-resources {
+        width: 33.0%;
+    }
+    .wrapper ul {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        min-height: 60vh;
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2.0rem;
+        padding-top: 5vh;
+    }
+    .summary {
+        padding-top: 4vh;
+        padding-bottom: 5vh;
+    }
+    h3 {
+        font-size: 1.8rem;
+        padding-top: 10vh;
+        padding-bottom: 5vh;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+    a {
+        font-size: 1.4rem;
+    }
+    .preamble {
+        padding-right: 0vh;
+        height: auto;
+        background-image: none;
+        padding-bottom: 5vh;
+    }
+    .explanation {
+        padding-left: 0vh;
+        height: auto;
+        background-image: none;
+        padding-bottom: 5vh;
+    }
+    .participation {
+        height: auto;
+        background-image: none;
+        padding-bottom: 5vh;
+    }
+    .benefits {
+        height: auto;
+        background-image: none;
+        padding-bottom: 5vh;
+    }
+    .requirements {
+        height: auto;
+        background-image: none;
+        padding-bottom: 5vh;
+        min-height: auto;
+    }
+    .footer a,
+    .wrapper a,
+    .wrapper ul {
+        font-size: 1.9rem;
+    }
+    .wrapper h3 {
+        font-size: 2.2rem;
+        padding: 5vh 0vw;
+    }
+    .wrapper div {
+        height: auto;
+    }
+    .design-selection,
+    .design-archives,
+    .design-resources {
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    div {
+        background-image: none;
+    }
+    h1 {
+        min-height: 60vh;
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2.0rem;
+        padding-top: 5vh;
+    }
+    .summary {
+        padding-top: 4vh;
+        padding-bottom: 5vh;
+    }
+    h3 {
+        font-size: 1.8rem;
+        padding-top: 5vh;
+        padding-bottom: 2vh;
+    }
+    p {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    a {
+        font-size: 1.1rem;
+    }
+    .preamble {
+        padding-right: 0vh;
+        height: auto;
+        background-image: none;
+    }
+    .explanation {
+        padding-left: 0vh;
+        background-image: none;
+        height: auto;
+    }
+    .participation {
+        min-width: 1vh;
+        padding-bottom: 5vh;
+        height: auto;
+        background-image: none;
+    }
+    .requirements {
+        height: auto;
+        padding-bottom: 0vh;
+        min-height: auto;
+        background-image: none;
+    }
+    .benefits {
+        background-image: none;
+        height: auto;
+    }
+    .footer a,
+    .wrapper a,
+    .wrapper ul {
+        font-size: 1.6rem;
+    }
+    .wrapper h3 {
+        font-size: 2rem;
+        padding: 5vh 0vw;
+    }
+    .wrapper div {
+        height: auto;
+    }
+    .design-selection,
+    .design-archives,
+    .design-resources {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        min-height: 60vh;
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2.0rem;
+        padding-top: 5vh;
+    }
+    .summary {
+        padding-top: 4vh;
+        padding-bottom: 5vh;
+    }
+    h3 {
+        font-size: 1.8rem;
+        padding-top: 5vh;
+        padding-bottom: 2vh;
+    }
+    p {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    a {
+        font-size: 1.1rem;
+    }
+    .preamble {
+        padding-right: 0vh;
+        height: auto;
+        background-image: none;
+    }
+    .explanation {
+        padding-left: 0vh;
+        background-image: none;
+        height: auto;
+    }
+    .participation {
+        min-width: 1vh;
+        padding-bottom: 5vh;
+        background-image: none;
+        height: auto;
+    }
+    .requirements {
+        height: auto;
+        padding-bottom: 0vh;
+        background-image: none;
+        min-height: auto;
+    }
+    .benefits {
+        background-image: none;
+        height: auto;
+    }
+    .footer a,
+    .wrapper a,
+    .wrapper ul {
+        font-size: 1.4rem;
+    }
+    .wrapper h3 {
+        font-size: 2rem;
+        padding: 5vh 0vw;
+    }
+    .wrapper div {
+        height: auto;
+    }
+    .design-selection,
+    .design-archives,
+    .design-resources {
+        width: 100%;
+        height: auto;
+    }
+}
