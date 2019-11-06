@@ -40,6 +40,15 @@
             pointer-events: none;
         }
         
+        .video-foreground {
+            pointer-events: none;
+        }
+        
+        .video-background iframe,
+        {
+            pointer-events: none;
+        }
+        
         @media (min-aspect-ratio: 16/9) {
             .video-foreground {
                 height: 300%;
@@ -82,13 +91,14 @@
     </section>-->
     <div class="video-background">
         <div class="video-foreground">
-            <iframe id="video" frameborder="0" height="100%" width="100%" src="https://youtube.com/embed/ub-AbuiKycE?autoplay=1&controls=0&showinfo=0&autohide=1">
-            </iframe>
+            <iframe id="player" frameborder="0" height="100%" width="100%" src="https://youtube.com/embed/ub-AbuiKycE?autoplay=1&controls=0&showinfo=0&autohide=1"></iframe>
         </div>
     </div>
     <section class="fixed-bottom card p-2 text-white bg-dark rounded-0">
         <button id="btn">Pause</button>
-        <span>Volumea</span>
+        <span>Volume</span>
+        <button id="play-button">Play</button>
+        <button id="pause-button">Pause</button>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
