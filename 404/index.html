@@ -19,20 +19,85 @@
         .texto {
             padding-top: 40vh;
         }
+        
+        .video {
+            min-width: 100vw;
+            width: 100vw;
+            min-height: 100vh;
+            height: 100vh;
+            object-fit: cover;
+        }
+        
+        .video-background {
+            background: #000;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -99;
+        }
+        
+        .video-foreground,
+        .video-background iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        @media (min-aspect-ratio: 16/9) {
+            .video-foreground {
+                height: 300%;
+                top: -100%;
+            }
+        }
+        
+        @media (max-aspect-ratio: 16/9) {
+            .video-foreground {
+                width: 300%;
+                left: -100%;
+            }
+        }
+        
+        @media all and (max-width: 600px) {
+            .vid-info {
+                width: 50%;
+                padding: .5rem;
+            }
+            .vid-info h1 {
+                margin-bottom: .2rem;
+            }
+        }
+        
+        @media all and (max-width: 500px) {
+            .vid-info .acronym {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <header class="navbar navbar-dark bg-dark fixed-top">
+    <header class="navbar navbar-dark bg-dark fixed-top py-0">
         <h5 id="name" class="navbar-brand mr-0 mr-md-2">Nome da música</h5>
         <a id="mais" class="navbar-brand ml-0 ml-md-2 h5 float-left" href="#">Sobre a música</a>
     </header>
-    <section class="h-100 w-100">
+    <!-- <section class="h-100 w-100">
         <h3 class="text-center texto">Página ainda em desenvolvimento, <a href="https://43d.github.io/Web" target="_black">volte aqui mais tarde</a> ou aproveite a música.</h3>
-    </section>
-    <section class="fixed-bottom">
+    </section>-->
+    <div class="video-background">
+        <div class="video-foreground">
+            <iframe frameborder="0" height="100%" width="100%" src="https://youtube.com/embed/ub-AbuiKycE?autoplay=1&controls=0&showinfo=0&autohide=1">
+            </iframe>
+        </div>
+    </div>
+    <section class="fixed-bottom card p-2 text-white bg-dark rounded-0">
         <span>Volume</span>
     </section>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
