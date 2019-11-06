@@ -20,14 +20,6 @@
             padding-top: 40vh;
         }
         
-        .video {
-            min-width: 100vw;
-            width: 100vw;
-            min-height: 100vh;
-            height: 100vh;
-            object-fit: cover;
-        }
-        
         .video-background {
             background: #000;
             position: fixed;
@@ -90,13 +82,15 @@
     </section>-->
     <div class="video-background">
         <div class="video-foreground">
-            <iframe frameborder="0" height="100%" width="100%" src="https://youtube.com/embed/ub-AbuiKycE?autoplay=1&controls=0&showinfo=0&autohide=1">
+            <iframe id="video" frameborder="0" height="100%" width="100%" src="https://youtube.com/embed/ub-AbuiKycE?autoplay=1&controls=0&showinfo=0&autohide=1">
             </iframe>
         </div>
     </div>
     <section class="fixed-bottom card p-2 text-white bg-dark rounded-0">
-        <span>Volume</span>
+        <button id="btn">Pause</button>
+        <span>Volumea</span>
     </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
 
