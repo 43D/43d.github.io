@@ -5,9 +5,20 @@ var you = "https://youtube.com/embed/",
 
 var json = {
     "video": [{
-        "nome": "Prayer In C - 8 Bit Remix",
-        "id": "ub-AbuiKycE"
-    }]
+            "nome": "Prayer In C - 8 Bit Remix",
+            "id": "ub-AbuiKycE"
+        },
+        {
+            "nome": "Caravan Palace - Rock It For Me",
+            "id": "fBGSJ3sbivI"
+
+        },
+        {
+            "nome": "打上花火 - (DAOKO × 米津玄師)",
+            "id": "-tKVN2mAKRI"
+
+        }
+    ]
 }
 
 var rand = Math.floor(Math.random() * (json.video.length - 0)) + 0;
