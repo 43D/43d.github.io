@@ -17,7 +17,7 @@
         }
         
         .texto {
-            padding-top: 40vh;
+            margin-top: 40vh;
         }
         
         .video-background {
@@ -30,6 +30,11 @@
             z-index: -99;
         }
         
+        .video-foreground {
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
+        
         .video-foreground,
         .video-background iframe {
             position: absolute;
@@ -37,15 +42,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-        }
-        
-        .video-foreground {
-            pointer-events: none;
-        }
-        
-        .video-background iframe,
-        {
             pointer-events: none;
         }
         
@@ -84,24 +80,18 @@
 <body>
     <header class="navbar navbar-dark bg-dark fixed-top py-0">
         <h5 id="name" class="navbar-brand mr-0 mr-md-2">Nome da música</h5>
-        <a id="mais" class="navbar-brand ml-0 ml-md-2 h5 float-left" href="#">Sobre a música</a>
+        <a id="mais" class="navbar-brand ml-0 ml-md-2 h5 float-left" target="_black" href="#">Sobre a música</a>
     </header>
-    <!-- <section class="h-100 w-100">
-        <h3 class="text-center texto">Página ainda em desenvolvimento, <a href="https://43d.github.io/Web" target="_black">volte aqui mais tarde</a> ou aproveite a música.</h3>
-    </section>-->
     <div class="video-background">
         <div class="video-foreground">
-            <iframe id="player" frameborder="0" height="100%" width="100%" src="https://youtube.com/embed/ub-AbuiKycE?autoplay=1&controls=0&showinfo=0&autohide=1"></iframe>
+            <iframe id="player" frameborder="0" height="100%" width="100%" src=""></iframe>
         </div>
     </div>
     <section class="fixed-bottom card p-2 text-white bg-dark rounded-0">
-        <button id="btn">Pause</button>
-        <span>Volume</span>
-        <button id="play-button">Play</button>
-        <button id="pause-button">Pause</button>
+        <h3 class="text-center">Página ainda em desenvolvimento, <a href="https://43d.github.io/Web" target="_black">volte aqui mais tarde</a> ou aproveite a música.</h3>
     </section>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
+    <script src="js/app.js "></script>
 </body>
 
 </html>
