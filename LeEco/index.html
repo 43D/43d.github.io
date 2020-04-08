@@ -21,6 +21,18 @@
             height: auto;
             width: 16vw;
         }
+        
+        select {
+            text-align-last: center;
+        }
+        
+        #conteudo.show {
+            display: block;
+        }
+        
+        #conteudo.hide {
+            display: none;
+        }
     </style>
 </head>
 
@@ -37,65 +49,77 @@
                 </div>
             </div>
             <div class="col-5"></div>
+            <div class="col-1 col-lg-3"></div>
+            <div class="col-10 col-lg-6 text-center">
+                <label class="mt-5" for="option">Selecione:</label>
+                <select id="option" class="custom-select" disabled>
+                    <option disabled selected >  </option>
+                  </select>
+            </div>
+            <div class="col-1 col-lg-3"></div>
 
-            <ul class="list-group col-md-4 p-3 text-center">
-                <p>Identification</p>
-                <li class="list-group-item">Name: <span id="text1"></span></li>
-                <li class="list-group-item">Model: <span id="text2"></span></li>
-                <li class="list-group-item">Region: <span id="text3"></span></li>
-            </ul>
-            <ul class="list-group col-md-4 p-3 text-center">
-                <p>Hardware</p>
-                <li class="list-group-item">CPU: <span id="text4"></span></li>
-                <li class="list-group-item">GPU: <span id="text5"></span></li>
-                <li class="list-group-item">RAM: <span id="text6"></span></li>
-                <li class="list-group-item">Storage: <span id="text7"></span></li>
-                <li class="list-group-item">Screen: <span id="text8"></span></li>
-                <li class="list-group-item">Resolution: <span id="text9"></span></li>
-            </ul>
-            <ul class="list-group col-md-4 p-3 text-center">
-                <p>Software</p>
-                <li class="list-group-item">System: <span id="text10"></span></li>
-                <li class="list-group-item">Version: <span id="text11"></span></li>
-                <li class="list-group-item">SDK: <span id="text12"></span></li>
-                <li class="list-group-item">Bluid name: <span id="text13"></span></li>
-                <li class="list-group-item">Bluid Version: <span id="text14"></span></li>
-                <li class="list-group-item">Kernel: <span id="text15"></span></li>
-                <li class="list-group-item">Kernel Version: <span id="text16"></span></li>
-            </ul>
 
-            <div class=" table-responsive-sm p-2 col-12">
-                <table class="table table-sm table-hover">
-                    <caption>Leeco Max 2<br>*All score by Antutu Benchmark app<br>**Charge govenador by Helix Engine app<br>Update: 09 Aug 2019</caption>
+            <div id="conteudo" class="hide container-fluid">
+                <div class="row">
+                    <ul class="list-group col-md-4 p-3 text-center">
+                        <h4 class="mt-4">Identification</h4>
+                        <li class="list-group-item">Name: <span id="text1"></span></li>
+                        <li class="list-group-item">Model: <span id="text2"></span></li>
+                        <li class="list-group-item">Region: <span id="text3"></span></li>
+                    </ul>
+                    <ul class="list-group col-md-4 p-3 text-center">
+                        <h4>Hardware</h4>
+                        <li class="list-group-item">CPU: <span id="text4"></span></li>
+                        <li class="list-group-item">GPU: <span id="text5"></span></li>
+                        <li class="list-group-item">RAM: <span id="text6"></span></li>
+                        <li class="list-group-item">Storage: <span id="text7"></span></li>
+                        <li class="list-group-item">Screen: <span id="text8"></span></li>
+                        <li class="list-group-item">Resolution: <span id="text9"></span></li>
+                    </ul>
+                    <ul class="list-group col-md-4 p-3 text-center">
+                        <h4>Software</h4>
+                        <li class="list-group-item">System: <span id="text10"></span></li>
+                        <li class="list-group-item">Version: <span id="text11"></span></li>
+                        <li class="list-group-item">SDK: <span id="text12"></span></li>
+                        <li class="list-group-item">Bluid name: <span id="text13"></span></li>
+                        <li class="list-group-item">Bluid Version: <span id="text14"></span></li>
+                        <li class="list-group-item">Kernel: <span id="text15"></span></li>
+                        <li class="list-group-item">Kernel Version: <span id="text16"></span></li>
+                    </ul>
 
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Govenador</th>
-                            <th scope="col">Score</th>
-                            <th scope="col">CPU</th>
-                            <!--
-                            <th scope="col" class="nom">CPU Match</th>
-                            <th scope="col" class="nom">Common CPU Usage</th>
-                            <th scope="col" class="nom">CPU Multicore</th>-->
-                            <th scope="col">GPU</th>
-                            <!--<th scope="col" class="nom">GPU - 3D Marooned</th>
-                            <th scope="col" class="nom">GPU - 3D Coastline</th>
-                            <th scope="col" class="nom">GPU - 3D Refinery</th>-->
-                            <th scope="col">UX</th>
-                            <!--<th scope="col" class="nom">UX - Data Security</th>
-                            <th scope="col" class="nom">UX - Data Processing</th>
-                            <th scope="col" class="nom">UX - Picture Processing</th>
-                            <th scope="col" class="nom">UX - EXP User</th>-->
-                            <th scope="col">MEM</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
+                    <div class=" table-responsive-sm p-2 col-12">
+                        <table class="table table-sm table-hover">
+                            <caption>Leeco Max 2<br>*All score by Antutu Benchmark app<br>**Charge govenador by Helix Engine app<br>Update: 09 Aug 2019</caption>
 
-                    </tbody>
-                </table>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Govenador</th>
+                                    <th scope="col">Score</th>
+                                    <th scope="col">CPU</th>
+                                    <!--
+                                <th scope="col" class="nom">CPU Match</th>
+                                <th scope="col" class="nom">Common CPU Usage</th>
+                                <th scope="col" class="nom">CPU Multicore</th>-->
+                                    <th scope="col">GPU</th>
+                                    <!--<th scope="col" class="nom">GPU - 3D Marooned</th>
+                                <th scope="col" class="nom">GPU - 3D Coastline</th>
+                                <th scope="col" class="nom">GPU - 3D Refinery</th>-->
+                                    <th scope="col">UX</th>
+                                    <!--<th scope="col" class="nom">UX - Data Security</th>
+                                <th scope="col" class="nom">UX - Data Processing</th>
+                                <th scope="col" class="nom">UX - Picture Processing</th>
+                                <th scope="col" class="nom">UX - EXP User</th>-->
+                                    <th scope="col">MEM</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/js.js"></script>

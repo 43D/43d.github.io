@@ -1,11 +1,13 @@
 {
     "option": [{
+            "name": "AOSiP Android 9",
             "deviceModel": 0,
             "deviceHardware": 0,
             "deviceSystem": 0,
             "resultId": 0
         },
         {
+            "name": "DerpFest Android 10",
             "deviceModel": 0,
             "deviceHardware": 0,
             "deviceSystem": 1,

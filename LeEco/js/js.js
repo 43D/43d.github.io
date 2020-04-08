@@ -1,12 +1,31 @@
-$.getJSON("https://raw.githubusercontent.com/43D/Web/master/LeEco/json/leMax2.json", function(json) {
-    main(json)
+var json = {};
+
+$("#option").change(function() {
+    showC($("#option option:selected").val());
+
+});
+
+$.getJSON("/LeEco/json/leMax2.json", function(jso) { //https://raw.githubusercontent.com/43D/Web/master/LeEco
+    json = jso;
+    main(json);
+    $('#option').removeAttr("disabled");
 });
 
 function main(json) {
-    var hardware = json.deviceHardware,
-        model = json.deviceModel,
-        system = json.deviceSystem,
-        resultado = json.resultId;
+    for (let i = 0; i < json.option.length; i++) {
+        $('#option').append('<option value="' + i + '">' + json.option[i].name + '</option>');
+
+    }
+}
+
+function showC(id) {
+    if ($('#conteudo').attr('class') == "hide container-fluid")
+        $('#conteudo').removeClass('hide').addClass('show')
+
+    let hardware = json.option[id].deviceHardware,
+        model = json.option[id].deviceModel,
+        system = json.option[id].deviceSystem,
+        resultado = json.option[id].resultId;
     ident(json, model);
     hard(json, hardware);
     sys(json, system);
@@ -40,26 +59,26 @@ function sys(json, system) {
 }
 
 function tabela(json, resultado) {
-    var pai = document.getElementById("tbody");
+    $('#tbody').empty();
     for (let i = 0; i < json.result[resultado].govenador.length; i++) {
-        var table = $('<tr>');
+        let table = $('<tr>');
 
-        var row1 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].name);
-        var row2 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].score);
-        var row3 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].cpu);
+        let row1 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].name);
+        let row2 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].score);
+        let row3 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].cpu);
         //var row4 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].cpuScore[0].mat);
         //var row5 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].cpuScore[0].com);
         //var row6 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].cpuScore[0].multi);
-        var row7 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].gpu);
+        let row7 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].gpu);
         //var row8 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].gpuScore[0].marooned);
         //var row9 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].gpuScore[0].coastline);
         //var row10 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].gpuScore[0].refinery);
-        var row11 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].ux);
+        let row11 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].ux);
         //var row12 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].uxScore[0].security);
         //var row13 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].uxScore[0].process);
         //var row14 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].uxScore[0].picture);
         //var row15 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].uxScore[0].user);
-        var row16 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].mem);
+        let row16 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].mem);
 
         table.append(row1);
         table.append(row2);
@@ -77,6 +96,7 @@ function tabela(json, resultado) {
         //table.append(row14);
         //table.append(row15);
         table.append(row16);
+        console.log(table);
         $('#tbody').append(table);
     }
 }
