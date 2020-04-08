@@ -1,9 +1,20 @@
 {
+    "option": [{
+            "deviceModel": 0,
+            "deviceHardware": 0,
+            "deviceSystem": 0,
+            "resultId": 0
+        },
+        {
+            "deviceModel": 0,
+            "deviceHardware": 0,
+            "deviceSystem": 1,
+            "resultId": 1
+        }
+
+    ],
     "name": "LeEco Le Max 2",
-    "deviceModel": 0,
-    "deviceHardware": 0,
-    "deviceSystem": 0,
-    "resultId": 0,
+
     "model": [{
             "model": "X820",
             "region": "CN"
@@ -33,10 +44,10 @@
         "system": "Android",
         "version": "10",
         "SDK": "29",
-        "kernel": "",
-        "kernelVersion": "",
-        "bluid": "",
-        "bluidVersion": ""
+        "kernel": "BlackScreen-7.1",
+        "kernelVersion": "3.8.140",
+        "bluid": "DerpFest",
+        "bluidVersion": "10-Official-20200407"
     }],
     "result": [{
         "govenador": [{
