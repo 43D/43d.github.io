@@ -5,7 +5,7 @@ $("#option").change(function() {
 
 });
 
-$.getJSON("/LeEco/json/leMax2.json", function(jso) { //https://raw.githubusercontent.com/43D/Web/master/LeEco
+$.getJSON("https://raw.githubusercontent.com/43D/Web/master/LeEco/json/leMax2.json", function(jso) { //https://raw.githubusercontent.com/43D/Web/master/LeEco
     json = jso;
     main(json);
     $('#option').removeAttr("disabled");
