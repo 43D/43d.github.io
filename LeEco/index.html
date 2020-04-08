@@ -26,18 +26,43 @@
             text-align-last: center;
         }
         
-        #conteudo.show {
+        #conteudo1.show {
             display: block;
         }
         
-        #conteudo.hide {
+        #conteudo1.hide,
+        #conteudo2.hide,
+        #conteudo3.hide,
+        #conteudo4.hide {
             display: none;
+        }
+        
+        #conteudo2.show,
+        #conteudo3.show,
+        #conteudo4.show {
+            display: block;
+            height: auto;
+            padding-left: 8.333333%;
+            padding-right: 8.333333%;
+        }
+        
+        .bottomInf {
+            height: auto;
+            border-radius: 25px 25px 0px 0px;
+        }
+        
+        .smallX {
+            height: 25px;
+        }
+        
+        .shadow-custom {
+            box-shadow: 1rem 2rem 7rem rgba(0, 0, 0, .175)!important;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div id="conteudo0" class="container-fluid">
         <div class="row">
             <div class="col-12 text-center mt-5">
                 <h1>Leeco Max 2 - Comparation</h1>
@@ -57,68 +82,124 @@
                   </select>
             </div>
             <div class="col-1 col-lg-3"></div>
+        </div>
+    </div>
+    <div id="conteudo1" class="hide container-fluid">
+        <div class="row">
+            <ul class="list-group col-md-4 p-3 text-center">
+                <h4 class="mt-4">Identification</h4>
+                <li class="list-group-item">Name: <span id="text1"></span></li>
+                <li class="list-group-item">Model: <span id="text2"></span></li>
+                <li class="list-group-item">Region: <span id="text3"></span></li>
+            </ul>
+            <ul class="list-group col-md-4 p-3 text-center">
+                <h4>Hardware</h4>
+                <li class="list-group-item">CPU: <span id="text4"></span></li>
+                <li class="list-group-item">GPU: <span id="text5"></span></li>
+                <li class="list-group-item">RAM: <span id="text6"></span></li>
+                <li class="list-group-item">Storage: <span id="text7"></span></li>
+                <li class="list-group-item">Screen: <span id="text8"></span></li>
+                <li class="list-group-item">Resolution: <span id="text9"></span></li>
+            </ul>
+            <ul class="list-group col-md-4 p-3 text-center">
+                <h4>Software</h4>
+                <li class="list-group-item">System: <span id="text10"></span></li>
+                <li class="list-group-item">Version: <span id="text11"></span></li>
+                <li class="list-group-item">SDK: <span id="text12"></span></li>
+                <li class="list-group-item">Bluid name: <span id="text13"></span></li>
+                <li class="list-group-item">Bluid Version: <span id="text14"></span></li>
+                <li class="list-group-item">Kernel: <span id="text15"></span></li>
+                <li class="list-group-item">Kernel Version: <span id="text16"></span></li>
+            </ul>
 
+            <div class=" table-responsive-sm p-2 col-12">
+                <table class="table table-sm table-hover">
+                    <caption id="cap"></caption>
 
-            <div id="conteudo" class="hide container-fluid">
-                <div class="row">
-                    <ul class="list-group col-md-4 p-3 text-center">
-                        <h4 class="mt-4">Identification</h4>
-                        <li class="list-group-item">Name: <span id="text1"></span></li>
-                        <li class="list-group-item">Model: <span id="text2"></span></li>
-                        <li class="list-group-item">Region: <span id="text3"></span></li>
-                    </ul>
-                    <ul class="list-group col-md-4 p-3 text-center">
-                        <h4>Hardware</h4>
-                        <li class="list-group-item">CPU: <span id="text4"></span></li>
-                        <li class="list-group-item">GPU: <span id="text5"></span></li>
-                        <li class="list-group-item">RAM: <span id="text6"></span></li>
-                        <li class="list-group-item">Storage: <span id="text7"></span></li>
-                        <li class="list-group-item">Screen: <span id="text8"></span></li>
-                        <li class="list-group-item">Resolution: <span id="text9"></span></li>
-                    </ul>
-                    <ul class="list-group col-md-4 p-3 text-center">
-                        <h4>Software</h4>
-                        <li class="list-group-item">System: <span id="text10"></span></li>
-                        <li class="list-group-item">Version: <span id="text11"></span></li>
-                        <li class="list-group-item">SDK: <span id="text12"></span></li>
-                        <li class="list-group-item">Bluid name: <span id="text13"></span></li>
-                        <li class="list-group-item">Bluid Version: <span id="text14"></span></li>
-                        <li class="list-group-item">Kernel: <span id="text15"></span></li>
-                        <li class="list-group-item">Kernel Version: <span id="text16"></span></li>
-                    </ul>
-
-                    <div class=" table-responsive-sm p-2 col-12">
-                        <table class="table table-sm table-hover">
-                            <caption>Leeco Max 2<br>*All score by Antutu Benchmark app<br>**Charge govenador by Helix Engine app<br>Update: 09 Aug 2019</caption>
-
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Govenador</th>
-                                    <th scope="col">Score</th>
-                                    <th scope="col">CPU</th>
-                                    <!--
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Govenador</th>
+                            <th scope="col">Score</th>
+                            <th scope="col">CPU</th>
+                            <!--
                                 <th scope="col" class="nom">CPU Match</th>
                                 <th scope="col" class="nom">Common CPU Usage</th>
                                 <th scope="col" class="nom">CPU Multicore</th>-->
-                                    <th scope="col">GPU</th>
-                                    <!--<th scope="col" class="nom">GPU - 3D Marooned</th>
+                            <th scope="col">GPU</th>
+                            <!--<th scope="col" class="nom">GPU - 3D Marooned</th>
                                 <th scope="col" class="nom">GPU - 3D Coastline</th>
                                 <th scope="col" class="nom">GPU - 3D Refinery</th>-->
-                                    <th scope="col">UX</th>
-                                    <!--<th scope="col" class="nom">UX - Data Security</th>
+                            <th scope="col">UX</th>
+                            <!--<th scope="col" class="nom">UX - Data Security</th>
                                 <th scope="col" class="nom">UX - Data Processing</th>
                                 <th scope="col" class="nom">UX - Picture Processing</th>
                                 <th scope="col" class="nom">UX - EXP User</th>-->
-                                    <th scope="col">MEM</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tbody">
+                            <th scope="col">MEM</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
 
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                    </tbody>
+                </table>
             </div>
+        </div>
+    </div>
+    <div id="conteudo2" class="hide container-fluid fixed-bottom">
+        <div class="row bg-white shadow-custom bottomInf">
+            <div class="col-12 smallX mb-3">
+                <button id="close2" class="border-0 bg-white p-2 float-right">×</button>
+            </div>
+            <table class="col-12 table table-sm table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" class="nom">CPU Match</th>
+                        <th scope="col" class="nom">Common CPU Usage</th>
+                        <th scope="col" class="nom">CPU Multicore</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody2">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="conteudo3" class="hide container-fluid fixed-bottom">
+        <div class="row bg-white shadow-custom bottomInf">
+            <div class="col-12 smallX mb-3">
+                <button id="close3" class="border-0 bg-white p-2 float-right">×</button>
+            </div>
+
+            <table class="col-12 table table-sm table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" class="nom">GPU - 3D Marooned</th>
+                        <th scope="col" class="nom">GPU - 3D Coastline</th>
+                        <th scope="col" class="nom">GPU - 3D Refinery</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody3">
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div id="conteudo4" class="hide container-fluid fixed-bottom">
+        <div class="row bg-white shadow-custom bottomInf">
+            <div class="col-12 smallX mb-3">
+                <button id="close4" class="border-0 bg-white p-2 float-right">×</button>
+            </div>
+            <table class="col-12 m-0 table table-sm table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" class="nom">UX - Data Security</th>
+                        <th scope="col" class="nom">UX - Data Processing</th>
+                        <th scope="col" class="nom">UX - Picture Processing</th>
+                        <th scope="col" class="nom">UX - EXP User</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody4">
+
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

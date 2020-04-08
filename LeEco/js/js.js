@@ -1,11 +1,16 @@
-var json = {};
-
-$("#option").change(function() {
-    showC($("#option option:selected").val());
-
+//actions
+$('#option').change(function() {
+    showTable($("#option option:selected").val());
+    hideCard()
 });
 
-$.getJSON("https://raw.githubusercontent.com/43D/Web/master/LeEco/json/leMax2.json", function(jso) { //https://raw.githubusercontent.com/43D/Web/master/LeEco
+$('#close2').click(function() { $('#conteudo2').removeClass('show').addClass('hide') });
+$('#close3').click(function() { $('#conteudo3').removeClass('show').addClass('hide') });
+$('#close4').click(function() { $('#conteudo4').removeClass('show').addClass('hide') });
+
+//Json
+var json = {};
+$.getJSON("https://raw.githubusercontent.com/43D/Web/master/LeEco/json/leMax2.json", function(jso) {
     json = jso;
     main(json);
     $('#option').removeAttr("disabled");
@@ -14,13 +19,12 @@ $.getJSON("https://raw.githubusercontent.com/43D/Web/master/LeEco/json/leMax2.js
 function main(json) {
     for (let i = 0; i < json.option.length; i++) {
         $('#option').append('<option value="' + i + '">' + json.option[i].name + '</option>');
-
     }
 }
 
-function showC(id) {
-    if ($('#conteudo').attr('class') == "hide container-fluid")
-        $('#conteudo').removeClass('hide').addClass('show')
+function showTable(id) {
+    if ($('#conteudo1').attr('class') == "hide container-fluid")
+        $('#conteudo1').removeClass('hide').addClass('show')
 
     let hardware = json.option[id].deviceHardware,
         model = json.option[id].deviceModel,
@@ -30,6 +34,7 @@ function showC(id) {
     hard(json, hardware);
     sys(json, system);
     tabela(json, resultado);
+    $('#cap').html(json.option[id].caption);
 }
 
 function ident(json, model) {
@@ -65,38 +70,74 @@ function tabela(json, resultado) {
 
         let row1 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].name);
         let row2 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].score);
-        let row3 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].cpu);
-        //var row4 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].cpuScore[0].mat);
-        //var row5 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].cpuScore[0].com);
-        //var row6 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].cpuScore[0].multi);
-        let row7 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].gpu);
-        //var row8 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].gpuScore[0].marooned);
-        //var row9 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].gpuScore[0].coastline);
-        //var row10 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].gpuScore[0].refinery);
-        let row11 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].ux);
-        //var row12 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].uxScore[0].security);
-        //var row13 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].uxScore[0].process);
-        //var row14 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].uxScore[0].picture);
-        //var row15 = $('<td>').text(json.result[resultado].govenador[i].antutu[0].uxScore[0].user);
-        let row16 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].mem);
-
+        let row3 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].cpu + " ").append('<button id="0_' + resultado + '_' + i + '" class="border-0 bg-white showCard"> ▼</button>');
+        let row4 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].gpu + " ").append('<button id="1_' + resultado + '_' + i + '" class="border-0 bg-white showCard">▼</button>');
+        let row5 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].ux + " ").append('<button id="2_' + resultado + '_' + i + '" class="border-0 bg-white showCard">▼</button>');
+        let row6 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].mem);
         table.append(row1);
         table.append(row2);
         table.append(row3);
-        //table.append(row4);
-        //table.append(row5);
-        //table.append(row6);
-        table.append(row7);
-        //table.append(row8);
-        //table.append(row9);
-        //table.append(row10);
-        table.append(row11);
-        //table.append(row12);
-        //table.append(row13);
-        //table.append(row14);
-        //table.append(row15);
-        table.append(row16);
-        console.log(table);
+        table.append(row4);
+        table.append(row5);
+        table.append(row6);
         $('#tbody').append(table);
+
+
+    }
+    //table event
+    $('.showCard').click(function() {
+        showCard(this.id);
+    });
+}
+
+function hideCard() {
+    $('#conteudo2').removeClass('show').addClass('hide');
+    $('#conteudo3').removeClass('show').addClass('hide');
+    $('#conteudo4').removeClass('show').addClass('hide');
+}
+
+function showCard(id) {
+    let arr = id.split('_');
+    hideCard();
+
+    let table = $('<tr>');
+    switch (parseInt(arr[0])) {
+        case 0:
+            $('#tbody2').empty();
+            let row1 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].cpuScore[0].mat);
+            let row2 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].cpuScore[0].com);
+            let row3 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].cpuScore[0].multi);
+            table.append(row1);
+            table.append(row2);
+            table.append(row3);
+            $('#tbody2').append(table);
+            $('#conteudo2').removeClass('hide').addClass('show');
+            break;
+        case 1:
+            $('#tbody3').empty();
+            let row4 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].gpuScore[0].marooned);
+            let row5 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].gpuScore[0].coastline);
+            let row6 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].gpuScore[0].refinery);
+            table.append(row4);
+            table.append(row5);
+            table.append(row6);
+            $('#tbody3').append(table);
+            $('#conteudo3').removeClass('hide').addClass('show');
+            break;
+        case 2:
+            $('#tbody4').empty();
+            let row7 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].uxScore[0].security);
+            let row8 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].uxScore[0].process);
+            let row9 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].uxScore[0].picture);
+            let row10 = $('<td>').text(json.result[arr[1]].govenador[arr[2]].antutu[0].uxScore[0].user);
+            table.append(row7);
+            table.append(row8);
+            table.append(row9);
+            table.append(row10);
+            $('#tbody4').append(table);
+            $('#conteudo4').removeClass('hide').addClass('show');
+            break;
+        default:
+            break;
     }
 }
