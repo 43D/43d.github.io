@@ -85,8 +85,10 @@ function tabela(json, resultado) {
 
     }
     //table event
-    $('.showCard').click(function() {
-        showCard(this.id);
+    $('.showCard').click(function() { showCard(this.id) });
+
+    $(document).ready(function() {
+        $("#tableP").tablesorter();
     });
 }
 
