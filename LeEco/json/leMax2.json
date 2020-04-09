@@ -5,6 +5,7 @@
             "deviceHardware": 0,
             "deviceSystem": 0,
             "resultId": 0,
+            "antutu_version": "v7",
             "caption": "Leeco Max 2<br>*All score by Antutu Benchmark app<br>**Charge govenador by Helix Engine app<br>Update: 09 Aug 2019"
         },
         {
@@ -13,6 +14,7 @@
             "deviceHardware": 0,
             "deviceSystem": 1,
             "resultId": 1,
+            "antutu_version": "v8",
             "caption": "Leeco Max 2<br>*All score by Antutu Benchmark app<br>**Charge govenador by Performance Tweaker app<br>***GPU Governor: performance<br>Update: 00 Abr 2020"
         }
 
@@ -578,7 +580,38 @@
         },
         {
             "govenador": [{
-                "name": "teste"
+                "name": "Conservative",
+                "antutu": [{
+                    "score": 159267,
+                    "cpu": 53086,
+                    "cpuScore": [{
+                        "mat": 14804,
+                        "com": 8454,
+                        "multi": 29828
+                    }],
+                    "gpu": 49245,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 19689,
+                        "refinery": 29556
+                    }],
+                    "mem": 29445,
+                    "memScore": [{
+                        "ram": 18899,
+                        "rom": 1372,
+                        "sequencialRead": 6250,
+                        "sequencialWrite": 1698,
+                        "random": 1226
+                    }],
+                    "ux": 27491,
+                    "uxScore": [{
+                        "security": 5263,
+                        "process": 5495,
+                        "picture": 4645,
+                        "user": 12088
+                    }]
+
+                }]
             }]
         }
     ]

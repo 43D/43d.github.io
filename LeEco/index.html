@@ -33,13 +33,15 @@
         #conteudo1.hide,
         #conteudo2.hide,
         #conteudo3.hide,
-        #conteudo4.hide {
+        #conteudo4.hide,
+        #conteudo5.hide {
             display: none;
         }
         
         #conteudo2.show,
         #conteudo3.show,
-        #conteudo4.show {
+        #conteudo4.show,
+        #conteudo5.show {
             display: block;
             height: auto;
             padding-left: 8.333333%;
@@ -160,9 +162,9 @@
             <table class="col-12 table table-sm table-hover text-center">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col" class="nom">GPU - 3D Marooned</th>
-                        <th scope="col" class="nom">GPU - 3D Coastline</th>
-                        <th scope="col" class="nom">GPU - 3D Refinery</th>
+                        <th scope="col" class="nom">3D Marooned</th>
+                        <th scope="col" class="nom">3D Coastline</th>
+                        <th scope="col" class="nom">3D Refinery</th>
                     </tr>
                 </thead>
                 <tbody id="tbody3">
@@ -179,13 +181,34 @@
             <table class="col-12 m-0 table table-sm table-hover text-center">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col" class="nom">UX - Data Security</th>
-                        <th scope="col" class="nom">UX - Data Processing</th>
-                        <th scope="col" class="nom">UX - Picture Processing</th>
-                        <th scope="col" class="nom">UX - EXP User</th>
+                        <th scope="col" class="nom">Data Security</th>
+                        <th scope="col" class="nom">Data Processing</th>
+                        <th scope="col" class="nom">Picture Processing</th>
+                        <th scope="col" class="nom">EXP User</th>
                     </tr>
                 </thead>
                 <tbody id="tbody4">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="conteudo5" class="show container-fluid fixed-bottom">
+        <div class="row bg-white shadow-custom bottomInf">
+            <div class="col-12 smallX mb-3">
+                <button id="close5" class="border-0 bg-white p-2 float-right">×</button>
+            </div>
+            <table class="col-12 m-0 table table-sm table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" class="nom">RAM access</th>
+                        <th scope="col" class="nom">ROM APP IO</th>
+                        <th scope="col" class="nom">Seque. reading of ROM</th>
+                        <th scope="col" class="nom">Seque. writing of ROM</th>
+                        <th scope="col" class="nom">random ROM access</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody5">
 
                 </tbody>
             </table>
