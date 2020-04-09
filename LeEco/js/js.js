@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 //Json
 var json = {};
-$.getJSON("/LeEco/json/leMax2.json", function(jso) { //https://raw.githubusercontent.com/43D/Web/master
+$.getJSON("https://raw.githubusercontent.com/43D/Web/master/LeEco/json/leMax2.json", function(jso) {
     json = jso;
     main(json);
     $('#option').removeAttr("disabled");
