@@ -9,13 +9,11 @@ $('#close3').click(function() { $('#conteudo3').removeClass('show').addClass('hi
 $('#close4').click(function() { $('#conteudo4').removeClass('show').addClass('hide') });
 $('#close5').click(function() { $('#conteudo5').removeClass('show').addClass('hide') });
 
-$(document).ready(function() {
-    $("#tableP").tablesorter();
-});
+
 
 //Json
 var json = {};
-$.getJSON("https://raw.githubusercontent.com/43D/Web/master/LeEco/json/leMax2.json", function(jso) {
+$.getJSON("/LeEco/json/leMax2.json", function(jso) { //https://raw.githubusercontent.com/43D/Web/master
     json = jso;
     main(json);
     $('#option').removeAttr("disabled");
@@ -41,6 +39,7 @@ function showTable(id) {
     tabela(json, resultado, json.option[id].antutu_version);
     $('#cap').html(json.option[id].caption);
 }
+
 
 function ident(json, model) {
     $('#text1').html(json.name);
@@ -68,11 +67,12 @@ function sys(json, system) {
     $('#text16').html(json.system[system].kernelVersion);
 }
 
-function tabela(json, resultado, Aversion) {
+function tabela(json, resultado, aversion) {
     $('#tbody').empty();
 
-    switch (Aversion) {
+    switch (aversion) {
         case "v7":
+            $('#3d').text('3D Marooned');
             for (let i = 0; i < json.result[resultado].govenador.length; i++) {
                 let table = $('<tr>');
 
@@ -92,13 +92,16 @@ function tabela(json, resultado, Aversion) {
             }
             break;
         case "v8":
+            $('#3d').text('3D Terracotta');
             for (let i = 0; i < json.result[resultado].govenador.length; i++) {
                 let table = $('<tr>');
 
                 let row1 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].name);
-                let row2 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].score);
+                let r2 = json.result[resultado].govenador[i].antutu[0].score - json.result[resultado].govenador[i].antutu[0].gpuScore[0].marooned;
+                let row2 = $('<td>').addClass('neg').text(r2);
                 let row3 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].cpu + " ").append('<button id="0_' + resultado + '_' + i + '" class="border-0 bg-white showCard"> ▼</button>');
-                let row4 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].gpu + " ").append('<button id="1_' + resultado + '_' + i + '" class="border-0 bg-white showCard">▼</button>');
+                let r4 = json.result[resultado].govenador[i].antutu[0].gpu - json.result[resultado].govenador[i].antutu[0].gpuScore[0].marooned;
+                let row4 = $('<td>').addClass('neg').text(r4 + " ").append('<button id="1_' + resultado + '_' + i + '" class="border-0 bg-white showCard">▼</button>');
                 let row5 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].ux + " ").append('<button id="2_' + resultado + '_' + i + '" class="border-0 bg-white showCard">▼</button>');
                 let row6 = $('<td>').addClass('neg').text(json.result[resultado].govenador[i].antutu[0].mem).append('<button id="3_' + resultado + '_' + i + '" class="border-0 bg-white showCard">▼</button>');
                 table.append(row1);
@@ -116,8 +119,8 @@ function tabela(json, resultado, Aversion) {
 
     //table event
     $('.showCard').click(function() { showCard(this.id) });
-
-
+    $.tablesorter.destroy($('#tableP'), false, function() {});
+    $("#tableP").tablesorter();
 }
 
 function hideCard() {
@@ -187,3 +190,35 @@ function showCard(id) {
             break;
     }
 }
+/*
+for (let i = 0; i < json.result[1].govenador.length; i++) {
+    let soma = json.result[1].govenador[i].antutu[0].cpu + json.result[1].govenador[i].antutu[0].gpu + json.result[1].govenador[i].antutu[0].mem + json.result[1].govenador[i].antutu[0].ux;
+    if (soma == json.result[1].govenador[i].antutu[0].score)
+        console.log(json.result[1].govenador[i].antutu[0].score);
+    else
+        console.log("não");
+}
+*/
+/*
+for (let i = 0; i < json.result[1].govenador.length; i++) {
+    var soma = json.result[1].govenador[i].antutu[0].cpuScore[0].mat;
+    soma += json.result[1].govenador[i].antutu[0].cpuScore[0].com;
+    soma += json.result[1].govenador[i].antutu[0].cpuScore[0].multi;
+    soma += json.result[1].govenador[i].antutu[0].gpuScore[0].marooned;
+    soma += json.result[1].govenador[i].antutu[0].gpuScore[0].coastline;
+    soma += json.result[1].govenador[i].antutu[0].gpuScore[0].refinery;
+    soma += json.result[1].govenador[i].antutu[0].memScore[0].ram;
+    soma += json.result[1].govenador[i].antutu[0].memScore[0].rom;
+    soma += json.result[1].govenador[i].antutu[0].memScore[0].sequencialRead;
+    soma += json.result[1].govenador[i].antutu[0].memScore[0].sequencialWrite;
+    soma += json.result[1].govenador[i].antutu[0].memScore[0].random;
+    soma += json.result[1].govenador[i].antutu[0].uxScore[0].security;
+    soma += json.result[1].govenador[i].antutu[0].uxScore[0].process;
+    soma += json.result[1].govenador[i].antutu[0].uxScore[0].picture
+    soma += json.result[1].govenador[i].antutu[0].uxScore[0].user;
+    if (soma == json.result[1].govenador[i].antutu[0].score)
+        console.log(json.result[1].govenador[i].antutu[0].score);
+    else
+        console.log("não");
+}
+*/

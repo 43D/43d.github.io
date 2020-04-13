@@ -6,7 +6,7 @@
             "deviceSystem": 0,
             "resultId": 0,
             "antutu_version": "v7",
-            "caption": "Leeco Max 2<br>*All score by Antutu Benchmark app<br>**Charge govenador by Helix Engine app<br>Update: 09 Aug 2019"
+            "caption": "Leeco Max 2<br>*All score by Antutu Benchmark V7 app<br>**Charge govenador by Helix Engine app<br>Update: 09 Aug 2019"
         },
         {
             "name": "Le Max 2 - DerpFest Android 10",
@@ -15,7 +15,7 @@
             "deviceSystem": 1,
             "resultId": 1,
             "antutu_version": "v8",
-            "caption": "Leeco Max 2<br>*All score by Antutu Benchmark app<br>**Charge govenador by Performance Tweaker app<br>***GPU Governor: performance<br>Update: 00 Abr 2020"
+            "caption": "Leeco Max 2<br>*All score by Antutu Benchmark V8.3.1 app<br>**Charge govenador by Performance Tweaker app<br>***GPU Governor: performance<br>**** min clock: 1113Mhz (CPU0, CPU1, CPU2, CPU3)<br>***** max clock: 1728Mhz (CPU0, CPU1)  2265Mhz(CPU2, CPU3)<br>******3D Terracotta is disregarded due to lack of memory in most tests (discounts final score and GPU score)<br>Update: 13 Abr 2020"
         }
 
     ],
@@ -580,35 +580,662 @@
         },
         {
             "govenador": [{
-                "name": "Conservative",
+                "name": "Alucard",
                 "antutu": [{
-                    "score": 159267,
-                    "cpu": 53086,
+                    "score": 165435,
+                    "cpu": 51675,
                     "cpuScore": [{
-                        "mat": 14804,
-                        "com": 8454,
-                        "multi": 29828
+                        "mat": 14225,
+                        "com": 7229,
+                        "multi": 30221
                     }],
-                    "gpu": 49245,
+                    "gpu": 57898,
                     "gpuScore": [{
                         "marooned": 0,
-                        "coastline": 19689,
-                        "refinery": 29556
+                        "coastline": 28439,
+                        "refinery": 29459
                     }],
-                    "mem": 29445,
+                    "mem": 33970,
                     "memScore": [{
-                        "ram": 18899,
-                        "rom": 1372,
-                        "sequencialRead": 6250,
-                        "sequencialWrite": 1698,
-                        "random": 1226
+                        "ram": 21706,
+                        "rom": 1506,
+                        "sequencialRead": 6679,
+                        "sequencialWrite": 1841,
+                        "random": 2238
                     }],
-                    "ux": 27491,
+                    "ux": 21892,
                     "uxScore": [{
-                        "security": 5263,
-                        "process": 5495,
-                        "picture": 4645,
-                        "user": 12088
+                        "security": 3827,
+                        "process": 4181,
+                        "picture": 640,
+                        "user": 13244
+                    }]
+
+                }]
+            }, {
+                "name": "Nightmare",
+                "antutu": [{
+                    "score": 168796,
+                    "cpu": 50031,
+                    "cpuScore": [{
+                        "mat": 13286,
+                        "com": 6893,
+                        "multi": 29852
+                    }],
+                    "gpu": 57986,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 28596,
+                        "refinery": 29390
+                    }],
+                    "mem": 32627,
+                    "memScore": [{
+                        "ram": 20431,
+                        "rom": 1535,
+                        "sequencialRead": 6649,
+                        "sequencialWrite": 1806,
+                        "random": 2206
+                    }],
+                    "ux": 28152,
+                    "uxScore": [{
+                        "security": 4006,
+                        "process": 4142,
+                        "picture": 6939,
+                        "user": 13065
+                    }]
+
+                }]
+            }, {
+                "name": "ElementalX",
+                "antutu": [{
+                    "score": 152885,
+                    "cpu": 52266,
+                    "cpuScore": [{
+                        "mat": 14696,
+                        "com": 9254,
+                        "multi": 28316
+                    }],
+                    "gpu": 37255,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 13148,
+                        "refinery": 24107
+                    }],
+                    "mem": 32551,
+                    "memScore": [{
+                        "ram": 20290,
+                        "rom": 1621,
+                        "sequencialRead": 6671,
+                        "sequencialWrite": 1850,
+                        "random": 2119
+                    }],
+                    "ux": 30813,
+                    "uxScore": [{
+                        "security": 5224,
+                        "process": 5525,
+                        "picture": 5737,
+                        "user": 14327
+                    }]
+
+                }]
+            }, {
+                "name": "SmartMax",
+                "antutu": [{
+                    "score": 142565,
+                    "cpu": 48643,
+                    "cpuScore": [{
+                        "mat": 12245,
+                        "com": 7016,
+                        "multi": 29382
+                    }],
+                    "gpu": 39125,
+                    "gpuScore": [{
+                        "marooned": 1809,
+                        "coastline": 13117,
+                        "refinery": 24199
+                    }],
+                    "mem": 30191,
+                    "memScore": [{
+                        "ram": 18161,
+                        "rom": 1529,
+                        "sequencialRead": 6549,
+                        "sequencialWrite": 1841,
+                        "random": 2111
+                    }],
+                    "ux": 24606,
+                    "uxScore": [{
+                        "security": 3949,
+                        "process": 4212,
+                        "picture": 4209,
+                        "user": 12236
+                    }]
+
+                }]
+            }, {
+                "name": "LionFish",
+                "antutu": [{
+                    "score": 152989,
+                    "cpu": 52979,
+                    "cpuScore": [{
+                        "mat": 14525,
+                        "com": 9228,
+                        "multi": 29226
+                    }],
+                    "gpu": 37217,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 13056,
+                        "refinery": 24161
+                    }],
+                    "mem": 33238,
+                    "memScore": [{
+                        "ram": 21101,
+                        "rom": 1634,
+                        "sequencialRead": 6489,
+                        "sequencialWrite": 1859,
+                        "random": 2155
+                    }],
+                    "ux": 29555,
+                    "uxScore": [{
+                        "security": 4973,
+                        "process": 5646,
+                        "picture": 4670,
+                        "user": 14266
+                    }]
+
+                }]
+            }, {
+                "name": "Darkness",
+                "antutu": [{
+                    "score": 131559,
+                    "cpu": 47393,
+                    "cpuScore": [{
+                        "mat": 12144,
+                        "com": 7027,
+                        "multi": 28222
+                    }],
+                    "gpu": 27997,
+                    "gpuScore": [{
+                        "marooned": 1942,
+                        "coastline": 12980,
+                        "refinery": 13075
+                    }],
+                    "mem": 30476,
+                    "memScore": [{
+                        "ram": 19060,
+                        "rom": 1431,
+                        "sequencialRead": 6499,
+                        "sequencialWrite": 1739,
+                        "random": 1747
+                    }],
+                    "ux": 25693,
+                    "uxScore": [{
+                        "security": 4183,
+                        "process": 4244,
+                        "picture": 4215,
+                        "user": 13051
+                    }]
+
+                }]
+            }, {
+                "name": "Impulse",
+                "antutu": [{
+                    "score": 179321,
+                    "cpu": 53941,
+                    "cpuScore": [{
+                        "mat": 14824,
+                        "com": 9280,
+                        "multi": 29837
+                    }],
+                    "gpu": 64922,
+                    "gpuScore": [{
+                        "marooned": 6534,
+                        "coastline": 28403,
+                        "refinery": 29985
+                    }],
+                    "mem": 34864,
+                    "memScore": [{
+                        "ram": 22456,
+                        "rom": 1696,
+                        "sequencialRead": 6626,
+                        "sequencialWrite": 1856,
+                        "random": 2230
+                    }],
+                    "ux": 25594,
+                    "uxScore": [{
+                        "security": 5131,
+                        "process": 5602,
+                        "picture": 850,
+                        "user": 14011
+                    }]
+
+                }]
+            }, {
+                "name": "Wheatley",
+                "antutu": [{
+                    "score": 148980,
+                    "cpu": 52948,
+                    "cpuScore": [{
+                        "mat": 14587,
+                        "com": 9350,
+                        "multi": 29011
+                    }],
+                    "gpu": 33051,
+                    "gpuScore": [{
+                        "marooned": 4408,
+                        "coastline": 13129,
+                        "refinery": 15514
+                    }],
+                    "mem": 32722,
+                    "memScore": [{
+                        "ram": 20782,
+                        "rom": 1691,
+                        "sequencialRead": 6417,
+                        "sequencialWrite": 1783,
+                        "random": 2049
+                    }],
+                    "ux": 30259,
+                    "uxScore": [{
+                        "security": 5537,
+                        "process": 5673,
+                        "picture": 4684,
+                        "user": 14365
+                    }]
+
+                }]
+            }, {
+                "name": "Blu_Active",
+                "antutu": [{
+                    "score": 165493,
+                    "cpu": 52869,
+                    "cpuScore": [{
+                        "mat": 14264,
+                        "com": 9278,
+                        "multi": 29327
+                    }],
+                    "gpu": 50738,
+                    "gpuScore": [{
+                        "marooned": 6177,
+                        "coastline": 14609,
+                        "refinery": 29952
+                    }],
+                    "mem": 31791,
+                    "memScore": [{
+                        "ram": 19677,
+                        "rom": 1740,
+                        "sequencialRead": 6486,
+                        "sequencialWrite": 1761,
+                        "random": 2127
+                    }],
+                    "ux": 30095,
+                    "uxScore": [{
+                        "security": 5468,
+                        "process": 5606,
+                        "picture": 4679,
+                        "user": 14342
+                    }]
+
+                }]
+            }, {
+                "name": "Nebula",
+                "antutu": [{
+                    "score": 166462,
+                    "cpu": 53682,
+                    "cpuScore": [{
+                        "mat": 14885,
+                        "com": 9305,
+                        "multi": 29492
+                    }],
+                    "gpu": 50902,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 21248,
+                        "refinery": 29654
+                    }],
+                    "mem": 32236,
+                    "memScore": [{
+                        "ram": 20438,
+                        "rom": 1682,
+                        "sequencialRead": 6494,
+                        "sequencialWrite": 1626,
+                        "random": 1996
+                    }],
+                    "ux": 29642,
+                    "uxScore": [{
+                        "security": 5184,
+                        "process": 5512,
+                        "picture": 4637,
+                        "user": 14309
+                    }]
+
+                }]
+            }, {
+                "name": "Despair",
+                "antutu": [{
+                    "score": 180452,
+                    "cpu": 53748,
+                    "cpuScore": [{
+                        "mat": 14560,
+                        "com": 9205,
+                        "multi": 29983
+                    }],
+                    "gpu": 58751,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 28937,
+                        "refinery": 29814
+                    }],
+                    "mem": 35134,
+                    "memScore": [{
+                        "ram": 22826,
+                        "rom": 1676,
+                        "sequencialRead": 6633,
+                        "sequencialWrite": 1827,
+                        "random": 2172
+                    }],
+                    "ux": 32819,
+                    "uxScore": [{
+                        "security": 5461,
+                        "process": 5541,
+                        "picture": 7113,
+                        "user": 14704
+                    }]
+
+                }]
+            }, {
+                "name": "Interactive",
+                "antutu": [{
+                    "score": 153568,
+                    "cpu": 53184,
+                    "cpuScore": [{
+                        "mat": 14819,
+                        "com": 9236,
+                        "multi": 29129
+                    }],
+                    "gpu": 37426,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 13264,
+                        "refinery": 24162
+                    }],
+                    "mem": 32866,
+                    "memScore": [{
+                        "ram": 20621,
+                        "rom": 1706,
+                        "sequencialRead": 6606,
+                        "sequencialWrite": 1774,
+                        "random": 2159
+                    }],
+                    "ux": 30092,
+                    "uxScore": [{
+                        "security": 5240,
+                        "process": 5595,
+                        "picture": 4654,
+                        "user": 14603
+                    }]
+
+                }]
+            }, {
+                "name": "ConservativeX",
+                "antutu": [{
+                    "score": 162966,
+                    "cpu": 53450,
+                    "cpuScore": [{
+                        "mat": 14636,
+                        "com": 9189,
+                        "multi": 29625
+                    }],
+                    "gpu": 46902,
+                    "gpuScore": [{
+                        "marooned": 10043,
+                        "coastline": 13092,
+                        "refinery": 23767
+                    }],
+                    "mem": 32203,
+                    "memScore": [{
+                        "ram": 20200,
+                        "rom": 1566,
+                        "sequencialRead": 6602,
+                        "sequencialWrite": 1724,
+                        "random": 2111
+                    }],
+                    "ux": 30411,
+                    "uxScore": [{
+                        "security": 5445,
+                        "process": 5662,
+                        "picture": 4634,
+                        "user": 14670
+                    }]
+
+                }]
+            }, {
+                "name": "Conservative",
+                "antutu": [{
+                    "score": 180371,
+                    "cpu": 53852,
+                    "cpuScore": [{
+                        "mat": 14806,
+                        "com": 9094,
+                        "multi": 29952
+                    }],
+                    "gpu": 58729,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 28929,
+                        "refinery": 29800
+                    }],
+                    "mem": 34348,
+                    "memScore": [{
+                        "ram": 22458,
+                        "rom": 1626,
+                        "sequencialRead": 6219,
+                        "sequencialWrite": 1791,
+                        "random": 2254
+                    }],
+                    "ux": 33442,
+                    "uxScore": [{
+                        "security": 5384,
+                        "process": 5577,
+                        "picture": 7754,
+                        "user": 14727
+                    }]
+
+                }]
+            }, {
+                "name": "OnDemand",
+                "antutu": [{
+                    "score": 166787,
+                    "cpu": 52740,
+                    "cpuScore": [{
+                        "mat": 14324,
+                        "com": 9426,
+                        "multi": 28990
+                    }],
+                    "gpu": 52232,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 22284,
+                        "refinery": 29948
+                    }],
+                    "mem": 31695,
+                    "memScore": [{
+                        "ram": 19702,
+                        "rom": 1679,
+                        "sequencialRead": 6538,
+                        "sequencialWrite": 1543,
+                        "random": 2233
+                    }],
+                    "ux": 30120,
+                    "uxScore": [{
+                        "security": 5176,
+                        "process": 5581,
+                        "picture": 4674,
+                        "user": 14689
+                    }]
+
+                }]
+            }, {
+                "name": "PowerSave",
+                "antutu": [{
+                    "score": 138147,
+                    "cpu": 41716,
+                    "cpuScore": [{
+                        "mat": 11183,
+                        "com": 6935,
+                        "multi": 23598
+                    }],
+                    "gpu": 43634,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 13825,
+                        "refinery": 29809
+                    }],
+                    "mem": 28355,
+                    "memScore": [{
+                        "ram": 16834,
+                        "rom": 1528,
+                        "sequencialRead": 6160,
+                        "sequencialWrite": 1708,
+                        "random": 2125
+                    }],
+                    "ux": 24442,
+                    "uxScore": [{
+                        "security": 3496,
+                        "process": 3880,
+                        "picture": 4583,
+                        "user": 12483
+                    }]
+
+                }]
+            }, {
+                "name": "YankActive",
+                "antutu": [{
+                    "score": 163823,
+                    "cpu": 52491,
+                    "cpuScore": [{
+                        "mat": 14541,
+                        "com": 9167,
+                        "multi": 28783
+                    }],
+                    "gpu": 49124,
+                    "gpuScore": [{
+                        "marooned": 5061,
+                        "coastline": 19905,
+                        "refinery": 24158
+                    }],
+                    "mem": 31988,
+                    "memScore": [{
+                        "ram": 20060,
+                        "rom": 1709,
+                        "sequencialRead": 6493,
+                        "sequencialWrite": 1699,
+                        "random": 2027
+                    }],
+                    "ux": 30220,
+                    "uxScore": [{
+                        "security": 5394,
+                        "process": 5666,
+                        "picture": 4677,
+                        "user": 14483
+                    }]
+
+                }]
+            }, {
+                "name": "Bioshock",
+                "antutu": [{
+                    "score": 153399,
+                    "cpu": 53941,
+                    "cpuScore": [{
+                        "mat": 14712,
+                        "com": 9411,
+                        "multi": 29818
+                    }],
+                    "gpu": 37296,
+                    "gpuScore": [{
+                        "marooned": 0,
+                        "coastline": 13132,
+                        "refinery": 24164
+                    }],
+                    "mem": 31852,
+                    "memScore": [{
+                        "ram": 19612,
+                        "rom": 1742,
+                        "sequencialRead": 6502,
+                        "sequencialWrite": 1842,
+                        "random": 2154
+                    }],
+                    "ux": 30310,
+                    "uxScore": [{
+                        "security": 5227,
+                        "process": 5654,
+                        "picture": 4672,
+                        "user": 14757
+                    }]
+
+                }]
+            }, {
+                "name": "Lionheart",
+                "antutu": [{
+                    "score": 162013,
+                    "cpu": 53307,
+                    "cpuScore": [{
+                        "mat": 14478,
+                        "com": 9465,
+                        "multi": 29364
+                    }],
+                    "gpu": 46540,
+                    "gpuScore": [{
+                        "marooned": 9243,
+                        "coastline": 13089,
+                        "refinery": 24208
+                    }],
+                    "mem": 32043,
+                    "memScore": [{
+                        "ram": 20200,
+                        "rom": 1535,
+                        "sequencialRead": 6526,
+                        "sequencialWrite": 1755,
+                        "random": 2027
+                    }],
+                    "ux": 30123,
+                    "uxScore": [{
+                        "security": 5463,
+                        "process": 5590,
+                        "picture": 4672,
+                        "user": 14398
+                    }]
+
+                }]
+            }, {
+                "name": "Performance",
+                "antutu": [{
+                    "score": 190835,
+                    "cpu": 53689,
+                    "cpuScore": [{
+                        "mat": 14596,
+                        "com": 9087,
+                        "multi": 30006
+                    }],
+                    "gpu": 68899,
+                    "gpuScore": [{
+                        "marooned": 10525,
+                        "coastline": 28452,
+                        "refinery": 29922
+                    }],
+                    "mem": 35093,
+                    "memScore": [{
+                        "ram": 22400,
+                        "rom": 1788,
+                        "sequencialRead": 6739,
+                        "sequencialWrite": 1816,
+                        "random": 2350
+                    }],
+                    "ux": 33154,
+                    "uxScore": [{
+                        "security": 5185,
+                        "process": 5751,
+                        "picture": 7578,
+                        "user": 14640
                     }]
 
                 }]
