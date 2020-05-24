@@ -1,0 +1,15 @@
+{
+    "dir": "ltr",
+    "lang": "pt-br",
+    "name": "Netflix",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://netflix.com/",
+    "short_name": "Netflix",
+    "theme_color": "transparent",
+    "description": "Netflix",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false
+}
