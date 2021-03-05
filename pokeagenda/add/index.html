@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokéagenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../app/css/css.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../">Minha Poké-agenda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../all/">Todos pokemons</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="../search/" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+                    <select name="option" class="form-select me-2" id="select0">
+                        <option value="nome">Nome</option>
+                        <option value="tipo">Tipo</option>
+                    </select>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row row-cols-2">
+            <div class="col-12">
+                <h1>Cadastro na Poké-agenda</h1>
+            </div>
+            <div class="input-group mb-3 col-12">
+                <span class="input-group-text" id="b1">Apelido do seu novo Pokémon:</span>
+                <input type="text" class="form-control" placeholder="name" aria-label="name" aria-describedby="b1" id="name">
+            </div>
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Desc.</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <th scope="row">Número</th>
+                            <td id="n"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nome</th>
+                            <td id="nome"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nome Japonês</th>
+                            <td id="nomeJap"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Espécie</th>
+                            <td id="especie"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tipo</th>
+                            <td id="tipo"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn btn-secondary" id="back">Cancelar</button>
+                <button type="button" class="btn btn-secondary" id="sub">Cadastrar na Poké-agenda</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="../app/js/app.js"></script>
+    <script>
+        $(document).ready(async function() {
+            var a = await getJs("../app/json/pokemon.json");
+            var b = getG("id");
+
+            $("#name").val(a[b]["nome"]);
+
+            $("#n").html(a[b]["id"]);
+            $("#nome").html(a[b]["nome"]);
+            $("#nomeJap").html(a[b]["nomeJap"]);
+            $("#especie").html(a[b]["especie"]);
+            $("#tipo").html(a[b]["tipo"]);
+
+            $("#back").click(function() {
+                window.history.back();
+            });
+
+            $("#sub").click(function() {
+                var c = {
+                    "id": 0,
+                    "key": b,
+                    "name": $("#name").val()
+                };
+                setDB(c);
+                window.location.replace("../");
+            });
+        });
+    </script>
+</body>
+
+</html>
