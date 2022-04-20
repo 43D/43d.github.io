@@ -1,6 +1,0 @@
-@media (max-width: 540px) {
-    .break::after {
-        content: "\A";
-        white-space: pre;
-    }
-}
