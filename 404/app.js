@@ -1,7 +1,7 @@
 //var rand = Math.floor(Math.random() * (json.video.length - 0)) + 0;
 $(document).ready(function () {
 
-    $.getJSON("404/photos.json", function (data) {
+    $.getJSON("https://43d.github.io/404/photos.json", function (data) {
         const count = Object.keys(data.photos).length;
         const r = Math.floor(Math.random() * (count));
         const res = Object.values(data.photos)[r];
