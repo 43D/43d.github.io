@@ -7,6 +7,6 @@ $(document).ready(function () {
         const res = Object.values(data.photos)[r];
         $("#mais").attr("href", "http://pixiv.net/artworks/" + res[0])
         console.log("url(404/img/"+res[0] + "_p" + res[1] + ".jpg"+")");
-        $('#img-background').css("background-image", "url(404/image/"+res[0] + "_p" + res[1] + ".jpg"+")"); 
+        $('#img-background').css("background-image", "url( '404/image/"+res[0] + "_p" + res[1] + ".jpg"+"')"); 
     });
 });
