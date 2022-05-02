@@ -1,30 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main Site - Allan Fel</title>
-    <link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        @media only all and (max-width: 800px) {
+            .d-none-m {
+                display: none !important;
+            }
+        }
+    </style>
+
 </head>
 
-<body class="text-white bg-dark">
+<body class="bg-light">
     <div class="container-fluid ">
         <div class="row">
-            <div class="list-group col-12 p-3">
-                <a href="/perfil" class="list-group-item list-group-item-action text-white bg-dark" target="_black">Perfil pessoal</a>
-                <a href="/pokeagenda" class="list-group-item list-group-item-action text-white bg-dark" target="_black">Poké-agenda - BD1</a>
-                <a href="/jardim" class="list-group-item list-group-item-action text-white bg-dark" target="_black">Projeto Jardim - UTFPR</a>
-                <a href="https://github.com/43D/public" class="list-group-item list-group-item-action text-white bg-dark" target="_black">CSS's para site DreamAnimes</a>
-                <a href="/LeEco" class="list-group-item list-group-item-action text-white bg-dark" target="_black">LeEco Le Max 2 - Govenador</a>
-                <a href="/Pigdata" class="list-group-item list-group-item-action text-white bg-dark" target="_black">PigData 2019 - UTFPR (Homework)</a>
-                <a href="https://43d.github.io/infographic_ibge/" class="list-group-item list-group-item-action text-white bg-dark" target="_black">Infográfico - Demografia brasileira</a>
-                <a href="https://43d.github.io/infographic_ecosystem/" class="list-group-item list-group-item-action text-white bg-dark" target="_black">Infográfico - Históricos da Educação <wbr> Ambiental no Brasil</a>
-                <a href="/404" class="list-group-item list-group-item-action text-white bg-dark" target="_black">Página 404 (será mostrando caso um link não esteja pronto)</a>
-                <a href="/perfil-old" class="list-group-item list-group-item-action text-white bg-dark" target="_black">Perfil pessoal (versão antiga)</a>
-            </div>
+            <header class="col-12 p-4">
+                <div class="m-4 py-4 px-2">
+                    <h1>Hub de projetos</h1>
+                    <h5>by <a href="https://43D.github.io/profile">Allan Felipe</a> </h5>
+                </div>
+            </header>
+            <main class="col-12 px-4">
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2">
+                        <a href="https://43d.github.io/profile" class=" btn btn-outline-success btn-lg" target="_black">
+                            Perfil pessoal
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2 d-none-m">
+                        <a href="https://github.com/43D/profile" class=" btn btn-outline-danger btn-lg" target="_black">
+                            Repositório do projeto
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2"><a
+                            href="https://43d.github.io/infographic_ibge" class=" btn btn-outline-success btn-lg"
+                            target="_black">
+                            Infográfico - Demografia brasileira - UTFPR (Homework)
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2 d-none-m">
+                        <a href="https://github.com/43D/infographic_ibge" class=" btn btn-outline-danger btn-lg"
+                            target="_black">
+                            Repositório do projeto
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2"><a
+                            href="https://43d.github.io/infographic_ecosystem" class=" btn btn-outline-success btn-lg"
+                            target="_black">
+                            Infográfico - Históricos da Educação Ambiental - UTFPR (Homework)
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2 d-none-m">
+                        <a href="https://github.com/43D/infographic_ecosystem" class=" btn btn-outline-danger btn-lg"
+                            target="_black">
+                            Repositório do projeto
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2">
+                        <a href="https://43d.github.io/pokeagenda" class=" btn btn-outline-success btn-lg"
+                            target="_black">
+                            Poke-agenda (2021) - UTFPR (Homework)
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2 d-none-m">
+                        <a href="https://github.com/43D/pokeagenda" class=" btn btn-outline-danger btn-lg"
+                            target="_black">
+                            Repositório do projeto
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2"><a
+                            href="https://43d.github.io/jardim" class=" btn btn-outline-success btn-lg" target="_black">
+                            Projeto Jardim Web - UTFPR (Homework)
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2 d-none-m">
+                        <a href="https://github.com/43D/jardim" class=" btn btn-outline-danger btn-lg" target="_black">
+                            Repositório do projeto
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2"><a
+                            href="https://43d.github.io/PigData" class=" btn btn-outline-success btn-lg"
+                            target="_black">
+                            PigData 2019 - UTFPR (Homework)
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2 d-none-m">
+                        <a href="https://github.com/43D/Pigdata" class=" btn btn-outline-danger btn-lg" target="_black">
+                            Repositório do projeto
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2"><a
+                            href="https://43d.github.io/LeEco" class=" btn btn-outline-success btn-lg" target="_black">
+                            LeEco Max 2 - Govenador benchmark
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2 d-none-m">
+                        <a href="https://github.com/43D/LeEco" class=" btn btn-outline-danger btn-lg" target="_black">
+                            Repositório do projeto
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2"><a
+                            href="https://43d.github.io/perfil-old" class=" btn btn-outline-success btn-lg"
+                            target="_black">
+                            perfil-old
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2 d-none-m">
+                        <a href="https://github.com/43D/perfil-old" class=" btn btn-outline-danger btn-lg"
+                            target="_black">
+                            Repositório do projeto
+                        </a>
+                    </li>
+                </ul>
+                <div class="text-center d-grid gap-2">
+                    <a href="https://43D.github.io/vszckmdaxbs" class="btn btn-outline-success btn-lg"
+                        target="_black">Erro 404 page</a>
+                </div>
+            </main>
+            <footer class="col-12 p-4">
+                <div class="m-4 py-4 px-3 text-center">
+                    <p>Feito por Allan Fel.</p>
+                    <a class="bot" id="facebook" href="https://fb.com/Allangamer43D" target="_blank"
+                        rel="noopener noreferrer"><img class="social" id="icon1" src="./public/img/fb.png" alt="Facebook logo"
+                            height="30" width="30"></a>
+                    <a class="bot" id="twitter" href="https://twitter.com/Allangamer43D" target="_blank"
+                        rel="noopener noreferrer"><img class="social" id="icon2" src="./public/img/tw.png" alt="Twiiter logo"
+                            height="30" width="30"></a>
+                </div>
+            </footer>
         </div>
     </div>
 
