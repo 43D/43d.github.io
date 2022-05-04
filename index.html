@@ -163,7 +163,19 @@
             </footer>
         </div>
     </div>
+    <script>
+        function fbButtom() {
+            let details = navigator.userAgent;
+            let regexp = /android|iphone|kindle|ipad/i;
+            let isMobileDevice = regexp.test(details);
 
+            if (isMobileDevice)
+                $("#facebook-mobile").removeClass("d-none");
+            else
+                $("#facebook-desktop").removeClass("d-none");
+        }
+        fbButtom();
+    </script>
 </body>
 
 </html>
