@@ -15,6 +15,10 @@
                 display: none !important;
             }
         }
+
+        .none {
+            display: none !important;
+        }
     </style>
 
 </head>
@@ -26,7 +30,8 @@
                 <div class="m-4 py-4 px-2 border-start border-5 border-secondary">
                     <h1>Hub de projetos</h1>
                     <h5>by <a href="https://43D.github.io/profile">Allan Felipe</a> </h5>
-                    <h5>Acesse o repositório desta página <a href="https://github.com/43D/43D.github.io">clicando aqui</a></h5>
+                    <h5>Acesse o repositório desta página <a href="https://github.com/43D/43D.github.io">clicando
+                            aqui</a></h5>
                 </div>
             </header>
             <main class="col-12 px-4">
@@ -109,7 +114,7 @@
                         </a>
                     </li>
                 </ul>
-                 <ul class="list-group list-group-horizontal">
+                <ul class="list-group list-group-horizontal">
                     <li class="list-group-item bg-light p-0 border-light list-group-item-action d-grid gap-2"><a
                             href="https://43d.github.io/profile-homework" class=" btn btn-outline-success btn-lg"
                             target="_black">
@@ -143,18 +148,21 @@
             <footer class="col-12 p-4">
                 <div class="m-4 py-4 px-3 text-center">
                     <p>Feito por Allan Fel.</p>
-                    <a class="bot d-none" id="facebook-desktop" href="https://facebook.com/Allangamer43D" target="_blank"><img
-                        class="social" id="icon1" src="./public/img/fb.png" alt="Facebook logo" height="30" width="30"></a>
-                    <a class="bot d-none" id="facebook-mobile" href="fb://profile/100010149914042" target="_blank"><img
-                        class="social" id="icon1" src="./public/img/fb.png" alt="Facebook logo" height="30" width="30"></a>
+                    <a class="bot none" id="facebook-desktop" href="https://facebook.com/Allangamer43D"
+                        target="_blank"><img class="social" id="icon1" src="./public/img/fb.png" alt="Facebook logo"
+                            height="30" width="30"></a>
+                    <a class="bot none" id="facebook-mobile" href="fb://profile/100010149914042" target="_blank"><img
+                            class="social" id="icon1" src="./public/img/fb.png" alt="Facebook logo" height="30"
+                            width="30"></a>
                     <a class="bot" id="twitter" href="https://twitter.com/Allangamer43D" target="_blank">
-                        <img class="social" id="icon2" src="./public/img/tw.png"
-                            alt="Twiiter logo" height="30" width="30"></a>
+                        <img class="social" id="icon2" src="./public/img/tw.png" alt="Twiiter logo" height="30"
+                            width="30"></a>
                     <a class="bot" id="github" href="https://github.com/43D" target="_blank">
-                         <img class="social" id="icon3" src="./public/img/git.png"
-                            alt="Github logo" height="30" width="30"></a>
-                    <a class="bot" id="mail" href="mailto:allan.goioere@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                            height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <img class="social" id="icon3" src="./public/img/git.png" alt="Github logo" height="30"
+                            width="30"></a>
+                    <a class="bot" id="mail" href="mailto:allan.goioere@gmail.com" target="_blank"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-envelope" viewBox="0 0 16 16">
                             <path
                                 d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                         </svg>
@@ -170,9 +178,9 @@
             let isMobileDevice = regexp.test(details);
 
             if (isMobileDevice)
-                $("#facebook-mobile").removeClass("d-none");
+                document.getElementById("facebook-mobile").className = "bot";
             else
-                $("#facebook-desktop").removeClass("d-none");
+                document.getElementById("facebook-desktop").className = "bot";
         }
         fbButtom();
     </script>
