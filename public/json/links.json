@@ -1,0 +1,89 @@
+{
+    "projects": {
+        "pages": {
+            "0": {
+                "name": "Perfil pessoal",
+                "link": "https://43d.github.io/profile",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/profile"
+                }
+            },
+            "1": {
+                "name": "Desafio Front-end da Chuva Inc.",
+                "link": "https://43d.github.io/exercicio-front-end-2022/",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/exercicio-front-end-2022"
+                }
+            },
+            "2": {
+                "name": "Infográfico - Demografia brasileira - UTFPR (Homework)",
+                "link": "https://43d.github.io/infographic_ibge",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/infographic_ibge"
+                }
+            },
+            "3": {
+                "name": "Infográfico - Históricos da Educação Ambiental - UTFPR (Homework)",
+                "link": "https://43d.github.io/infographic_ecosystem",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/infographic_ecosystem"
+                }
+            },
+            "4": {
+                "name": "Poke-agenda (2021) - UTFPR (Homework)",
+                "link": "https://43d.github.io/pokeagenda",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/pokeagenda"
+                }
+            },
+            "5": {
+                "name": "Projeto Jardim Web - UTFPR (Homework)",
+                "link": "https://43d.github.io/jardim",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/jardim"
+                }
+            },
+            "6": {
+                "name": "PigData 2019 - UTFPR (Homework)",
+                "link": "https://43d.github.io/PigData",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/Pigdata"
+                }
+            },
+            "7": {
+                "name": "Apresentação pessoal (2019) - UTFPR (Homework)",
+                "link": "https://43d.github.io/profile-homework",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/profile-homework"
+                }
+            },
+            "8": {
+                "name": "LeEco Max 2 - Govenador benchmark",
+                "link": "https://43d.github.io/LeEco",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/LeEco"
+                }
+            },
+            "9": {
+                "name": "Page 404",
+                "link": "https://43d.github.io/404",
+                "repo": null
+            }
+        },
+        "others": {
+            "0": {
+                "name": "Desafio Back-end da Chuva Inc.",
+                "link": "https://github.com/43D/exercicios-php-2022"
+            }
+        }
+    }
+}
