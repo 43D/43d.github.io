@@ -74,6 +74,14 @@
                 }
             },
             "9": {
+                "name": "IBGE API JSON (2022)",
+                "link": "https://43d.github.io/API-IBGE-EXAMPLE",
+                "repo": {
+                    "name": "Repositório do projeto",
+                    "link": "https://github.com/43D/API-IBGE-EXAMPLE"
+                }
+            },
+            "10": {
                 "name": "Page 404",
                 "link": "https://43d.github.io/404",
                 "repo": null
@@ -83,6 +91,10 @@
             "0": {
                 "name": "Desafio Back-end da Chuva Inc.",
                 "link": "https://github.com/43D/exercicios-php-2022"
+            },
+             "1": {
+                "name": "IBGE API JSON em 3 linguagens (2022)",
+                "link": "https://github.com/43D/API-IBGE-EXAMPLE"
             }
         }
     }
